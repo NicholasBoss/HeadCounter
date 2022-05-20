@@ -89,7 +89,7 @@ const Counter2 = () => {
             {
               setCdown(cdown - 1);
               setCup(cup + 1);
-              // playCountSound();
+              playCountSound();
             }
             if (cdown == 1)
             {
@@ -130,7 +130,7 @@ const playCountSound = async () => {
     load ++;
     // console.log(load);
   }
-  // await soundObj.replayAsync(my_button_sound);
+  await soundObj.replayAsync(my_button_sound);
 }
 
 // const playResetSound = async () => {
