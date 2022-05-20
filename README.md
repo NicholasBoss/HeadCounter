@@ -17,7 +17,7 @@ Expo
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Restarting apllication (Stackoverflow)](https://stackoverflow.com/questions/55708709/how-to-restart-react-native-application-on-button-click-event)
+* [Restarting application (Stackoverflow)](https://stackoverflow.com/questions/55708709/how-to-restart-react-native-application-on-button-click-event)
 * [State hooks](https://reactjs.org/docs/hooks-overview.html)
 * [Playing sound with expo-av](https://rossbulat.medium.com/react-native-how-to-load-and-play-audio-241808f97f61)
 * [Button Help](https://docs.nativebase.io/button)
