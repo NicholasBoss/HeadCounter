@@ -10,33 +10,33 @@ const my_reset_sound = require('./assets/buttonreset.wav')
 const soundObj = new Audio.Sound()
 var load = 0;
 
-const Counter1 = () => {
+const Counter1 = () => { // counts the first "class" that I am counting for
   var highnumber = 24;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
   const [disable, setDisable] = React.useState(false);
   
-  return (
-    <NativeBaseProvider styles={styles.container}>
+  return ( // provides styling for the whole app page
+    <NativeBaseProvider styles={styles.container}> 
       <View style={styles.container}>
       <Heading><Text>9 AM Class</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
       
-        <Button backgroundColor={'amber.100'} variant='outline' size='lg'
+        <Button backgroundColor={'amber.100'} variant='outline' size='lg' // creates the button with the specified properties to activate the counter
           disabled = {disable}
           onPress={() => {
             if (cdown != 0)
             {
               setCdown(cdown - 1);
               setCup(cup + 1);
-              playCountSound();
+              playCountSound(); // plays a sound when pressed
             }
             if (cdown == 1)
             {
-              setDisable(true)
+              setDisable(true) // disables the button when the counter reaches zero
             }
               // console.log(count)
             
@@ -47,7 +47,7 @@ const Counter1 = () => {
           {'\n'}
           {'\n'}
         </Text>
-        <Button backgroundColor={'red.500'} size='sm'
+        <Button backgroundColor={'red.500'} size='sm' // creates a button to reset the class
           onPress={() =>{
             // playResetSound()
             setCdown(highnumber)
@@ -67,14 +67,14 @@ const Counter1 = () => {
 
 
 
-const Counter2 = () => {
+const Counter2 = () => { // counts the second "class" that I am counting for
   var highnumber = 27;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
   const [disable, setDisable] = React.useState(false);
   
-  return (
+  return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}>
       <View style={styles.container}>
       <Heading><Text>11:30 AM Class</Text></Heading>
@@ -82,30 +82,30 @@ const Counter2 = () => {
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
         <Stack>
-        <Button backgroundColor={'amber.100'} variant='outline' size='lg'
+        <Button backgroundColor={'amber.100'} variant='outline' size='lg' // creates the button with the specified properties to activate the counter
           disabled = {disable}
           onPress={() => {
             if (cdown != 0)
             {
               setCdown(cdown - 1);
               setCup(cup + 1);
-              playCountSound();
+              playCountSound(); // plays a sound when pressed
             }
             if (cdown == 1)
             {
-              setDisable(true)
+              setDisable(true) // disables the button when the counter reaches zero
             }
               // console.log(count)
             
           }}
           title = "press me"
-        ><Text style={styles.text}>COUNT</Text></Button>
+        ><Text style={styles.text}>COUNT</Text></Button> 
         <Text>
           {'\n'}
           {'\n'}
         </Text>
-        <Button backgroundColor={'red.500'} size='sm'
-          onPress={() =>{
+        <Button backgroundColor={'red.500'} size='sm' // creates a button to reset the class
+          onPress={() =>{ 
             // playResetSound()
             setCdown(highnumber)
             setCup(lownumber)
@@ -122,7 +122,7 @@ const Counter2 = () => {
 }
 
 
-const playCountSound = async () => {
+const playCountSound = async () => { // loads the sound to play when button is pressed
 
   if (load == 0)
   {
@@ -133,6 +133,7 @@ const playCountSound = async () => {
   await soundObj.replayAsync(my_button_sound);
 }
 
+// may eventually be used to play a reset sound
 // const playResetSound = async () => {
 //   if (load == 1)
 //   {
@@ -144,7 +145,7 @@ const playCountSound = async () => {
 // }
 
 
-const Cafe = () => {
+const CounterPage = () => {
   return (
     <>
       <Counter1/>
@@ -153,7 +154,7 @@ const Cafe = () => {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // creates the styles for my app page
   text: {
     color: 'gold'
   },
@@ -168,4 +169,4 @@ const styles = StyleSheet.create({
  
 });
 
-export default Cafe;
+export default CounterPage; // runs the CounterPage function to display my app
