@@ -3,7 +3,7 @@
 This app is to help attendance takers anywhere. This app allows you to click a button and it will decrease the amount of students absent and increse the amount of students that are present. 
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/fGqBNRpuTiM)
 
 # Development Environment
 

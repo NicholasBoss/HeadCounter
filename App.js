@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, NativeModules, ScrollView } from 'react-native';
-import {Audio} from 'expo-av';
+import { StyleSheet, Text, View } from 'react-native';
+import { Audio } from 'expo-av';
 import React from 'react';
-import {Button, VStack, Box, Heading, Stack, NativeBaseProvider, Divider, Center} from 'native-base';
+import {Button, Heading, Stack, NativeBaseProvider } from 'native-base';
 
 
-const my_button_sound = require('./assets/buttonpress.wav')
-const my_reset_sound = require('./assets/buttonreset.wav')
+const my_button_sound = require('./assets/buttonpress.wav') // sets my button press sound to this soundfile
+// const my_reset_sound = require('./assets/buttonreset.wav') // may be used later to implement a reset sound
 const soundObj = new Audio.Sound()
 var load = 0;
 
