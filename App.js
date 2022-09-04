@@ -10,8 +10,8 @@ const my_button_sound = require('./assets/buttonpress.wav') // sets my button pr
 const soundObj = new Audio.Sound()
 var load = 0;
 
-const Counter1 = () => { // counts the first "class" that I am counting for
-  var highnumber = 24;
+const Counter1 = () => { // counts the first "class" that I am counting for -- CLASS AT 10:15 AM
+  var highnumber = 30;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -20,7 +20,7 @@ const Counter1 = () => { // counts the first "class" that I am counting for
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}> 
       <View style={styles.container}>
-      <Heading><Text>9 AM Class</Text></Heading>
+      <Heading><Text>CIT 111</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -45,6 +45,24 @@ const Counter1 = () => { // counts the first "class" that I am counting for
         ><Text style={styles.text}>COUNT</Text></Button>
         <Text>
           {'\n'}
+        </Text>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != highnumber)
+            {
+              setCdown(cdown + 1);
+              setCup(cup - 1);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == highnumber)
+            {
+              setDisable(true) // disables the button when the counter reaches the high number
+            }
+          }
+          }
+          title = "press me"
+        ><Text style={styles.text}>INCREASE</Text></Button>
+        <Text>
           {'\n'}
         </Text>
         <Button backgroundColor={'red.500'} size='sm' // creates a button to reset the class
@@ -67,8 +85,8 @@ const Counter1 = () => { // counts the first "class" that I am counting for
 
 
 
-const Counter2 = () => { // counts the second "class" that I am counting for
-  var highnumber = 27;
+const Counter2 = () => { // counts the second "class" that I am counting for -- CLASS AT 11:30 AM
+  var highnumber = 34;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -77,7 +95,7 @@ const Counter2 = () => { // counts the second "class" that I am counting for
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}>
       <View style={styles.container}>
-      <Heading><Text>11:30 AM Class</Text></Heading>
+      <Heading><Text>WDD 130</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -102,6 +120,24 @@ const Counter2 = () => { // counts the second "class" that I am counting for
         ><Text style={styles.text}>COUNT</Text></Button> 
         <Text>
           {'\n'}
+        </Text>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != highnumber)
+            {
+              setCdown(cdown + 1);
+              setCup(cup - 1);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == highnumber)
+            {
+              setDisable(true) // disables the button when the counter reaches the high number
+            }
+          }
+          }
+          title = "press me"
+        ><Text style={styles.text}>INCREASE</Text></Button>
+        <Text>
           {'\n'}
         </Text>
         <Button backgroundColor={'red.500'} size='sm' // creates a button to reset the class
