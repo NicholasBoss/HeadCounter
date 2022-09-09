@@ -11,7 +11,7 @@ const soundObj = new Audio.Sound()
 var load = 0;
 
 const Counter1 = () => { // counts the first "class" that I am counting for -- CLASS AT 10:15 AM
-  var highnumber = 34;
+  var highnumber = 35;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -86,7 +86,7 @@ const Counter1 = () => { // counts the first "class" that I am counting for -- C
 
 
 const Counter2 = () => { // counts the second "class" that I am counting for -- CLASS AT 11:30 AM
-  var highnumber = 34;
+  var highnumber = 30;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
