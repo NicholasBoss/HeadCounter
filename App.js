@@ -176,7 +176,7 @@ const CIT111_3 = () => { // counts the first "class" that I am counting for -- C
 
 
 const WDD130_5 = () => { // counts the second "class" that I am counting for -- WDD 130 section 5 at 7:45 AM
-  var highnumber = 30;
+  var highnumber = 28;
   var lownumber = 0;
   var classcode = 'WDD 130';
   const [code, setCode] = useState(classcode);
@@ -249,8 +249,8 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
   );
 }
 
-const WDD130_8 = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:30 AM
-  var highnumber = 30;
+const WDD130_8 = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:00 AM
+  var highnumber = 35;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
