@@ -101,8 +101,8 @@ const CIT111_4 = () => { // counts the first "class" that I am counting for -- C
   );
 }
 
-const CIT111_3 = () => { // counts the first "class" that I am counting for -- CIT 111 section 3 at 11:30 AM
-  var highnumber = 35;
+const CIT111_3 = () => { // counts the second "class" that I am counting for -- CIT 111 section 3 at 11:30 AM
+  var highnumber = 32;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
