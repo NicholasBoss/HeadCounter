@@ -61,10 +61,26 @@ const CIT111_4 = () => { // counts the first "class" that I am counting for -- C
             
           }}
           title = "press me"
-        ><Text style={styles.text}>COUNT</Text></Button>
-        <Text>
-          {'\n'}
-        </Text>
+        ><Text style={styles.text}>COUNT +1</Text></Button>
+        {/* make a +5 button */}
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 5);
+              setCup(cup + 5);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+
+          }}
+          title = "press me"
+        ><Text style={styles.text}>+5</Text></Button>
+
         <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
           onPress={() => {
             if (cdown != highnumber)
@@ -133,7 +149,24 @@ const CIT111_3 = () => { // counts the second "class" that I am counting for -- 
             
           }}
           title = "press me"
-        ><Text style={styles.text}>COUNT</Text></Button>
+        ><Text style={styles.text}>COUNT +1</Text></Button>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 5);
+              setCup(cup + 5);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+
+          }}
+          title = "press me"
+        ><Text style={styles.text}>+5</Text></Button>
         <Text>
           {'\n'}
         </Text>
@@ -209,7 +242,24 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
             
           }}
           title = "press me"
-        ><Text style={styles.text}>COUNT</Text></Button> 
+        ><Text style={styles.text}>COUNT +1</Text></Button>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 5);
+              setCup(cup + 5);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+
+          }}
+          title = "press me"
+        ><Text style={styles.text}>+5</Text></Button>
         <Text>
           {'\n'}
         </Text>
@@ -281,10 +331,24 @@ const WDD130_8 = () => { // counts the second "class" that I am counting for -- 
             
           }}
           title = "press me"
-        ><Text style={styles.text}>COUNT</Text></Button> 
-        <Text>
-          {'\n'}
-        </Text>
+        ><Text style={styles.text}>COUNT +1</Text></Button>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 5);
+              setCup(cup + 5);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+
+          }}
+          title = "press me"
+        ><Text style={styles.text}>+5</Text></Button>
         
         <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
           onPress={() => {
