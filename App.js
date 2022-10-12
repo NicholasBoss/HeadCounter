@@ -118,7 +118,7 @@ const CIT111_4 = () => { // counts the first "class" that I am counting for -- C
 }
 
 const CIT111_3 = () => { // counts the second "class" that I am counting for -- CIT 111 section 3 at 11:30 AM
-  var highnumber = 32;
+  var highnumber = 31;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -167,9 +167,6 @@ const CIT111_3 = () => { // counts the second "class" that I am counting for -- 
           }}
           title = "press me"
         ><Text style={styles.text}>+5</Text></Button>
-        <Text>
-          {'\n'}
-        </Text>
         <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
           onPress={() => {
             if (cdown != highnumber)
@@ -260,9 +257,6 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
           }}
           title = "press me"
         ><Text style={styles.text}>+5</Text></Button>
-        <Text>
-          {'\n'}
-        </Text>
         <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
           onPress={() => {
             if (cdown != highnumber)
@@ -300,7 +294,7 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
 }
 
 const WDD130_8 = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:00 AM
-  var highnumber = 35;
+  var highnumber = 37;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
