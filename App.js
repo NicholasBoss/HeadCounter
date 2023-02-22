@@ -23,14 +23,22 @@ const Counter1 = () => {
 const Counter2 = () => {
   return (
     <>
+    <CIT111_2/>
     <WDD130_5/>
-    <WDD130_8/>
     </>
   );
 }
 
-const CIT111_4 = () => { // counts the first "class" that I am counting for -- CIT 111 section 4 at 9:00 AM
-  var highnumber = 35;
+const Workshop = () => {
+  return (
+    <>
+    <Cworkshop/>
+    </>
+  );
+}
+
+const CIT111_4 = () => { // counts the first "class" that I am counting for -- CIT 111 section 4 at 7:45 AM
+  var highnumber = 32;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -39,7 +47,7 @@ const CIT111_4 = () => { // counts the first "class" that I am counting for -- C
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}> 
       <View style={styles.container}>
-      <Heading><Text>CIT 111 9AM</Text></Heading>
+      <Heading><Text>CIT 111 7:45AM</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -117,8 +125,8 @@ const CIT111_4 = () => { // counts the first "class" that I am counting for -- C
   );
 }
 
-const CIT111_3 = () => { // counts the second "class" that I am counting for -- CIT 111 section 3 at 11:30 AM
-  var highnumber = 31;
+const CIT111_3 = () => { // counts the second "class" that I am counting for -- CIT 111 section 3 at 9:00 AM
+  var highnumber = 36;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -127,7 +135,7 @@ const CIT111_3 = () => { // counts the second "class" that I am counting for -- 
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}> 
       <View style={styles.container}>
-      <Heading><Text>CIT 111 11:30 AM</Text></Heading>
+      <Heading><Text>CIT 111 9:00 AM</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -205,11 +213,9 @@ const CIT111_3 = () => { // counts the second "class" that I am counting for -- 
 
 
 
-const WDD130_5 = () => { // counts the second "class" that I am counting for -- WDD 130 section 5 at 7:45 AM
-  var highnumber = 28;
+const CIT111_2 = () => { // counts the next "class" that I am counting for -- CIT 111 section 2 at 11:30 AM
+  var highnumber = 34;
   var lownumber = 0;
-  var classcode = 'WDD 130';
-  const [code, setCode] = useState(classcode);
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
   const [disable, setDisable] = React.useState(false);
@@ -217,7 +223,7 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}>
       <View style={styles.container}>
-      <Heading><Text>WDD 130 7:45AM</Text></Heading>
+      <Heading><Text>CIT 111 11:30AM</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -240,7 +246,7 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
           }}
           title = "press me"
         ><Text style={styles.text}>COUNT +1</Text></Button>
-        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+        <Button backgroundColor={'amber.100'} variant='outline' size='xs' // creates a button to increase the counter
           onPress={() => {
             if (cdown != 0)
             {
@@ -293,8 +299,8 @@ const WDD130_5 = () => { // counts the second "class" that I am counting for -- 
   );
 }
 
-const WDD130_8 = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:00 AM
-  var highnumber = 37;
+const WDD130_5 = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:00 AM
+  var highnumber = 28;
   var lownumber = 0;
   const [cdown, setCdown] = useState(highnumber);
   const [cup, setCup] = useState(lownumber);
@@ -303,7 +309,94 @@ const WDD130_8 = () => { // counts the second "class" that I am counting for -- 
   return ( // provides styling for the whole app page
     <NativeBaseProvider styles={styles.container}>
       <View style={styles.container}>
-      <Heading><Text>WDD 130 9AM</Text></Heading>
+      <Heading><Text>WDD 130 2PM</Text></Heading>
+      <Heading><Text>{cdown} students are absent.</Text></Heading>
+      <Heading><Text>{cup} students are here.</Text></Heading>
+      <Text>{'\n'}</Text>
+        <Stack>
+        <Button backgroundColor={'amber.100'} variant='outline' size='lg' // creates the button with the specified properties to activate the counter
+          disabled = {disable}
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 1);
+              setCup(cup + 1);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+            
+          }}
+          title = "press me"
+        ><Text style={styles.text}>COUNT +1</Text></Button>
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != 0)
+            {
+              setCdown(cdown - 5);
+              setCup(cup + 5);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == 1)
+            {
+              setDisable(true) // disables the button when the counter reaches zero
+            }
+              // console.log(count)
+
+          }}
+          title = "press me"
+        ><Text style={styles.text}>+5</Text></Button>
+        
+        <Button backgroundColor={'amber.100'} variant='outline' size='sm' // creates a button to increase the counter
+          onPress={() => {
+            if (cdown != highnumber)
+            {
+              setCdown(cdown + 1);
+              setCup(cup - 1);
+              playCountSound(); // plays a sound when pressed
+            }
+            if (cdown == highnumber)
+            {
+              setDisable(true) // disables the button when the counter reaches the high number
+            }
+          }
+          }
+          title = "press me"
+        ><Text style={styles.text}>INCREASE</Text></Button>
+        <Text>
+          {'\n'}
+        </Text>
+        <Button backgroundColor={'red.500'} size='sm' // creates a button to reset the class
+          onPress={() =>{ 
+            // playResetSound()
+            setCdown(highnumber)
+            setCup(lownumber)
+            setDisable(false)
+            
+          }}
+          title = 'Restart'
+
+          >Reset Class</Button>
+        </Stack>
+    </View>
+    </NativeBaseProvider>
+  );
+}
+
+const Cworkshop = () => { // counts the second "class" that I am counting for -- WDD 130 section 8 at 9:00 AM
+  var highnumber = 66;
+  var lownumber = 0;
+  const [cdown, setCdown] = useState(highnumber);
+  const [cup, setCup] = useState(lownumber);
+  const [disable, setDisable] = React.useState(false);
+  
+  return ( // provides styling for the whole app page
+    <NativeBaseProvider styles={styles.container}>
+      <View style={styles.container}>
+      <Heading><Text>Concept Workshop</Text></Heading>
       <Heading><Text>{cdown} students are absent.</Text></Heading>
       <Heading><Text>{cup} students are here.</Text></Heading>
       <Text>{'\n'}</Text>
@@ -404,18 +497,24 @@ const playCountSound = async () => { // loads the sound to play when button is p
 
 const Home = () => {
   const [selected, setSelected] = React.useState();
-  if (selected == "CIT 111")
+  if (selected == "Early Classes")
     {
       return (
       <Counter1/>
       )
     }
-  else if (selected == "WDD 130")
+  else if (selected == "Later Classes")
     {
       return (
       <Counter2/>
       )
     }
+    else if (selected == "Workshop")
+    {
+      return (
+        <Workshop/>
+      )
+    }        
   else{
   return (
     <>
@@ -429,15 +528,13 @@ const Home = () => {
         accessibilityLabel="Select class" 
         placeholder="Select class" 
         onValueChange={(itemValue) => setSelected(itemValue)}>
-          <Select.Item label="CIT 111" value="CIT 111" />
-          <Select.Item label="WDD 130" value="WDD 130" />
+          <Select.Item label="Early Classes" value="Early Classes" />
+          <Select.Item label="Later Classes" value="Later Classes" />
+          <Select.Item label="Workshop" value="Workshop" />
         </Select>
       </Stack>
       </View>
     </NativeBaseProvider>
-    
-      {/* <Counter1/>
-      <Counter2/> */}
     </>
     
   );
